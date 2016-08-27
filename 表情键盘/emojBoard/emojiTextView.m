@@ -19,15 +19,23 @@
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        self.font = [UIFont systemFontOfSize:16];
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:UITextViewTextDidChangeNotification object:self];
+        [self setUpOrigin];
     }
     return self;
 }
 
+-(void)awakeFromNib{
+    [self setUpOrigin];
+}
+
+-(void)setUpOrigin{
+    self.font = [UIFont systemFontOfSize:16];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(my_textViewDidChange:) name:UITextViewTextDidChangeNotification object:self];
+}
+
 #pragma mark - 监听文字改变
-- (void)textDidChange:(NSNotification *)note
+- (void)my_textViewDidChange:(NSNotification *)note
 {
     self.placeholderLabel.hidden = self.hasText;
 }
@@ -107,6 +115,7 @@
     }
 }
 
+#pragma mark - 将带有表情的一段文字 变为 纯文本文字
 -(NSString *)sendHttpString{
     
     NSMutableString *totalString = [[NSMutableString alloc] init];
@@ -124,7 +133,6 @@
     }];
     
     return totalString;
-    
 }
 
 -(void)layoutSubviews{

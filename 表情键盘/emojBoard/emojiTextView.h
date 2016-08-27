@@ -18,6 +18,7 @@
 
 -(void)appendWithEmotion:(EmotionName *)emotion;
 
+//将带有表情的一段文字 变为 纯文本文字
 -(NSString *)sendHttpString;
 
 @end

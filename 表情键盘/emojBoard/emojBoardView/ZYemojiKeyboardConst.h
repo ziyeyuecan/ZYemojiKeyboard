@@ -32,6 +32,7 @@ UIKIT_EXTERN NSString * const emotionDidDeletedNotification;
 // 通知里面取出表情用的key
 UIKIT_EXTERN NSString * const selectedEmotion;
 
+//---------------------------增删表情时修改----------------------------
 // 存放 默认 表情的路径
 UIKIT_EXTERN NSString * const defaultEmotionPath;
 // 存放 默认 表情info.plist的路径

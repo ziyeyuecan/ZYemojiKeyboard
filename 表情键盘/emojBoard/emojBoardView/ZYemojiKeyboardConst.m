@@ -20,6 +20,7 @@ NSString * const emotionDidDeletedNotification = @"EmotionDidDeletedNotification
 //通知里面取出表情用的key
 NSString * const selectedEmotion = @"SelectedEmotion";
 
+//---------------------------增删表情时修改----------------------------
 // 存放 默认 表情的路径
 NSString * const defaultEmotionPath = @"EmotionIcons/default";
 // 存放 默认 表情info.plist的路径

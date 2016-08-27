@@ -32,6 +32,11 @@
  */
 - (IBAction)emojiBoardClick:(id)sender;
 
+/**
+ *  显示已经输入的内容
+ */
+- (IBAction)showTextViewText:(id)sender;
+
 @end
 
 @implementation ViewController
@@ -76,6 +81,16 @@
     [self.textView becomeFirstResponder];
 }
 
+- (IBAction)showTextViewText:(id)sender {
+    
+    UIAlertController *AC = [UIAlertController alertControllerWithTitle:@"内容" message:self.textView.sendHttpString preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"继续" style:UIAlertActionStyleCancel handler:nil];
+    
+    [AC addAction:action];
+    [self presentViewController:AC animated:YES completion:nil];
+}
+
 #pragma mark - 选中表情的动作
 -(void)selectEmotion:(NSNotification *)note{
     
@@ -90,6 +105,8 @@
 -(void)deleteEmotion:(NSNotification *)note{
     [self.textView deleteBackward];
 }
+
+
 
 @end
 
