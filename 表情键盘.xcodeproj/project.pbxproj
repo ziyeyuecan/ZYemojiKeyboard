@@ -595,7 +595,7 @@
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "表情键盘/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.futaihua.----";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ziyeyuecan.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -607,7 +607,7 @@
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "表情键盘/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.futaihua.----";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ziyeyuecan.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

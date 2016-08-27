@@ -12,12 +12,24 @@
 
 @interface ViewController ()
 
+/**
+ *  能够显示emoji的textView
+ */
 @property (weak, nonatomic) IBOutlet emojiTextView *textView;
 
+/**
+ *  表情、键盘切换键
+ */
 @property (weak, nonatomic) IBOutlet UIButton *emojBtn;
 
+/**
+ *  emoji键盘
+ */
 @property(nonatomic,strong)emojiKeyboard *EmojiKeyboard;
 
+/**
+ *  切换键动作
+ */
 - (IBAction)emojiBoardClick:(id)sender;
 
 @end
@@ -37,6 +49,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.textView.placeholder = @"尽情的编写表情吧";
+    self.textView.layer.cornerRadius = 5;
     
     //监听表情键盘的 选中和删除
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectEmotion:) name:emotionDidSelectedNotification object:nil];
