@@ -8,8 +8,13 @@ add emotion step:
 suggestion:the dictionary key of plist file in new emotion foler keep the same with dictionary key of plist flier in production. Otherwise you must bulid model by yourself again. 
 
 introduction of dictionary key in plist filer:
+
 chs：Emotion of Chinese characters
+
 cht：Emotion of traditional Chinese characters
+
 gif：gif picture's name
+
 png：picture's name
+
 code：System comes with Emoji coding（According to the dictionary there is no such key to determine whether the system comes with Emoji）.
