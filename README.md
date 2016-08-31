@@ -7,6 +7,7 @@ add emotion step:
 
 suggestion:the dictionary key of plist file in new emotion foler keep the same with dictionary key of plist flier in production. Otherwise you must bulid model by yourself again. 
 
+
 introduction of dictionary key in plist filer:
 
 chs：Emotion of Chinese characters
